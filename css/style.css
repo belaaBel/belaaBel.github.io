@@ -1,0 +1,120 @@
+
+/* CSS Document */
+body{
+    margin: 0;
+}
+.cube{
+    display: flex;
+    justify-content: center ;
+    animation: run 5s both 1s ;
+}
+
+.cube div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   
+    animation: color_c 5s both 1s ;
+    border: 2px solid black;
+   
+    color: white;
+    text-align: center;
+}
+
+.cube:hover .one{
+    animation: drive_one 5s both 2s infinite alternate, color_font 5s both 2s infinite alternate, okr 10s infinite alternate;
+}
+
+.cube:hover .two{
+    animation: drive_two 5s both 2s infinite alternate, color_font 5s both 2s infinite alternate, okr 10s infinite alternate;
+}
+
+.cube:hover .three{
+    animation: drive_three 5s both 2s infinite alternate, color_font 5s both 2s infinite alternate, okr 10s infinite alternate;
+}
+
+.cube:hover .four{
+    animation: drive_four 5s both 2s infinite alternate, color_font 5s both 2s infinite alternate, okr 10s infinite alternate;
+}
+
+@keyframes okr{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes color_font{
+    from{
+        color:white;
+        font: 20px bold;
+    }
+    to{
+        color: black;
+        font: 60px bold;
+    }
+}
+
+@keyframes run{
+    from{
+        margin-top: 0%;
+    }
+    to{
+        margin-top: 25%;
+     
+    }
+}
+
+@keyframes color_c{
+    from{
+        border: 2px solid white;
+    }
+    to{
+        border: 2px solid black;
+    }
+}
+
+@keyframes drive_one{
+    from{
+        position: static;
+        border: 2px solid black;
+    }
+    to{
+        margin: -5% 5% 50% 5%;
+        border: 2px solid rgb(236, 4, 159);
+    }
+}
+
+@keyframes drive_two{
+    from{
+        position: static;
+        border: 2px solid black;
+    }
+    to{
+        margin: -5% 50% 50% -5%;
+        border: 2px solid rgb(236, 4, 159);
+    }
+}
+
+@keyframes drive_three{
+    from{
+        position: static;
+        border: 2px solid black;
+    }
+    to{
+        margin: 5% 25% 50% -5%;
+        border: 2px solid rgb(236, 4, 159);
+    }
+}
+
+@keyframes drive_four{
+    from{
+        position: static;
+        border: 2px solid black;
+    }
+    to{
+        margin: 5% 25% 50% 5%;
+        border: 2px solid rgb(236, 4, 159);
+    }
+}
